@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.prodigious</groupId>
+    <artifactId>Grading</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>15</maven.compiler.source>
+        <maven.compiler.target>15</maven.compiler.target>
+    </properties>
+    <description>Grading API
+
+Problem Statement (available only in Spanish)
+------------------------------------------------------------------------
+
+Imagine que está trabajando en uno de una serie de equipos pequeños que crean una solicitud para las escuelas para ayudar
+a administrar las calificaciones de los estudiantes, la administración de días de enfermedad y otra información. Su equipo
+ha sido elegido para implementar la pequeña pieza del lado del servidor que administra el seguimiento de las
+calificaciones de los estudiantes.
+
+La aplicación debe permitir el seguimiento de las puntuaciones de un número ilimitado de tareas y exámenes. La
+aplicación debe permitir que cada profesor tenga porcentajes configurables para ambos tipos. La calificación se realiza
+en un promedio ponderado según los porcentajes introducidos por el maestro. Además de las puntuaciones normales,
+los estudiantes pueden realizar tareas opcionales para obtener crédito adicional. El crédito adicional funciona de la
+siguiente manera: cuando un estudiante entrega una asignación de crédito adicional, agrega un número configurable
+de puntos porcentuales a la calificación media ponderada actual del estudiante solo para Asignaciones, y esta cantidad
+se arrastra acumulativamente.
+</description>
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+            <version>4.11</version>
+        </dependency>
+    </dependencies>
+    <reporting>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-checkstyle-plugin</artifactId>
+                <configuration>
+                    <configLocation>config/sun_checks.xml</configLocation>
+                </configuration>
+            </plugin>
+        </plugins>
+    </reporting>
+</project>
